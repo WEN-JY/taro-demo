@@ -1,23 +1,11 @@
 import { Component } from 'react'
 import { View, Text } from '@tarojs/components'
 import './index.scss'
+import Component2 from './component'
 
 export default class Index extends Component {
-
-  componentWillMount() { }
-
-  componentDidMount() { }
-
-  componentWillUnmount() { }
-
-  componentDidShow() { }
-
-  componentDidHide() { }
   handleCustomClick = (...args) => {
     console.log('child custom component clicked',...args)
-  }
-  setRef = (node) => {
-    console.log('element ref:', node)
   }
   render() {
     return (
@@ -33,7 +21,9 @@ export default class Index extends Component {
           componentClick={this.handleCustomClick}
           someAttr='1'
         ></custom-comp1>
-        <Text>Hello world!</Text>
+        <Component2 queryParams={this.handleCustomClick} onClick={this.handleCustomClick}>
+          
+        </Component2>
         <view onTap={this.handleCustomClick}>内置原生组件</view>
       </View>
     )

@@ -11,7 +11,6 @@ Component({
             this.props.onComponentClick1()
             // 非on开头的函数传递
             this.props.componentClick()
-            
         }
     }
 })
