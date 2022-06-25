@@ -1,0 +1,4 @@
+<view onTap="onClick">
+我是自定义组件2
+<comp1 onComponentClick="onComponentClick"></comp1>
+</view>
